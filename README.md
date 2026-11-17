@@ -1,4 +1,4 @@
-# Son's Workroom — v0.4 (locked visual design)
+# Mine Workroom — v0.4 (locked visual design)
 
 This version uses the **exact approved screenshot** as the full-stage art, with functional task/timer panels positioned over the original panel areas. No redesigned room. The artwork itself is static; ambient CSS overlays provide light rain, aquarium movement, steam, and typing sparkle. It is **not** a fully separated character sprite animation.
 
