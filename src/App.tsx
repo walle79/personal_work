@@ -453,7 +453,13 @@ export default function App() {
               </h2>
             </div>
             <div className="task-list">
-              {tasks.map((t) => {
+              {stats.filter((job) => job.all > 0).map((job) => (
+                <section className="task-group" key={job.id} aria-label={`${job.name} tasks`}>
+                  <div className="task-group-heading">
+                    <span>{job.flag} {job.tag} · {job.name}</span>
+                    <span>{job.done}/{job.all}</span>
+                  </div>
+              {tasks.filter((t) => t.job === job.id).map((t) => {
                 const isChosen = chosen === t.id && !t.done;
                 return (
                   <div
@@ -473,12 +479,11 @@ export default function App() {
                         toggle(t);
                       }}
                       title={t.done ? 'Mark incomplete' : 'Mark complete'}
+                      role="checkbox"
+                      aria-checked={t.done}
+                      aria-label={`${t.done ? 'Mark incomplete' : 'Mark complete'}: ${t.title}`}
                     >
-                      {t.done ? (
-                        <Check className="check-svg" />
-                      ) : isChosen ? (
-                        <Play className="play-svg" />
-                      ) : null}
+                      {t.done && <Check className="check-svg" />}
                     </button>
                     <span className="task-name" title={t.title}>
                       {t.title}
@@ -506,6 +511,8 @@ export default function App() {
                   </div>
                 );
               })}
+                </section>
+              ))}
             </div>
             <button className="add" onClick={() => edit()}>
               <Plus /> Add task

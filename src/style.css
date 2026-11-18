@@ -543,6 +543,28 @@ textarea {
   scrollbar-color: #8d5ab4 transparent;
 }
 
+.task-group + .task-group {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #c084fc26;
+}
+
+.task-group-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 10px 8px;
+  color: #d1bfe3;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.task-group-heading > span:last-child {
+  font-variant-numeric: tabular-nums;
+  color: #b79ccf;
+}
+
 .task {
   display: flex;
   align-items: center;
@@ -580,13 +602,6 @@ textarea {
   background: #4ade80;
   border-color: #4ade80;
   color: #111827;
-}
-
-.task.chosen .tick {
-  background: #9333ea;
-  border-color: #9333ea;
-  border-radius: 50%;
-  color: #ffffff;
 }
 
 .check-svg {
