@@ -456,8 +456,9 @@ export default function App() {
               {stats.filter((job) => job.all > 0).map((job) => (
                 <section className="task-group" key={job.id} aria-label={`${job.name} tasks`}>
                   <div className="task-group-heading">
-                    <span>{job.flag} {job.tag} · {job.name}</span>
-                    <span>{job.done}/{job.all}</span>
+                    <span title={job.name} role="img" aria-label={job.name}>
+                      <FlagBadge job={job.id} />
+                    </span>
                   </div>
               {tasks.filter((t) => t.job === job.id).map((t) => {
                 const isChosen = chosen === t.id && !t.done;

@@ -560,9 +560,10 @@ textarea {
   font-weight: 650;
 }
 
-.task-group-heading > span:last-child {
-  font-variant-numeric: tabular-nums;
-  color: #b79ccf;
+.task-group-heading .flag-circle {
+  display: block;
+  width: 23px;
+  height: 23px;
 }
 
 .task {
