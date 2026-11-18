@@ -913,6 +913,29 @@ textarea {
 }
 
 /* AMBIENT EFFECTS */
+.shelf-photo {
+  position: absolute;
+  left: 402px;
+  top: 201px;
+  width: 46px;
+  height: 50px;
+  overflow: hidden;
+  z-index: 2;
+  transform: rotate(0.8deg);
+  box-shadow: inset 0 0 3px #21163280;
+}
+
+.shelf-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 38%;
+  transform: scale(1.35);
+  transform-origin: 50% 38%;
+  filter: brightness(0.9) sepia(0.08);
+}
+
 .sleep-bubbles {
   position: absolute;
   left: 376px;

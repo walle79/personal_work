@@ -24,6 +24,7 @@ import {
 import reference from './assets/room-compact-sidebar.png';
 import avatar from './assets/avatar.png';
 import shiftlyIcon from './assets/shiftly.svg';
+import couplePhoto from './assets/couple.png';
 
 type Job = 'india' | 'singapore' | 'nigeria';
 type Task = {
@@ -322,6 +323,9 @@ export default function App() {
             transformOrigin: 'top left',
           } as CSSProperties}
         >
+          <div className="shelf-photo">
+            <img src={couplePhoto} alt="Ảnh kỷ niệm của hai người ở biển" />
+          </div>
           {effects && (
             <>
               <div className="rain-mask" aria-hidden="true">
