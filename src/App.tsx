@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import reference from './assets/room-compact-sidebar.png';
 import avatar from './assets/avatar.png';
+import shiftlyIcon from './assets/shiftly.svg';
 
 type Job = 'india' | 'singapore' | 'nigeria';
 type Task = {
@@ -371,7 +372,7 @@ export default function App() {
             <img src={avatar} alt="Avatar" className="avatar-img" />
             <div>
               <strong className="brand-title" title="Switch jobs. Stay in flow.">
-                <img src="/shiftly.svg" alt="" /> Shiftly
+                <img src={shiftlyIcon} alt="" /> Shiftly
               </strong>
               <small>Lv. {Math.floor(xp / 500) + 1} • QA / Automation / SDET</small>
             </div>
